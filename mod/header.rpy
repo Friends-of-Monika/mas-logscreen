@@ -3,7 +3,7 @@ init -990 python:
         author="Friends of Monika",
         name="Log Screen",
         description=_("Display all MAS logs right in game in a configurable log screen."),
-        version="1.0.2",
+        version="1.0.3",
         settings_pane="fom_log_screen_config"
     )
 
