@@ -65,7 +65,8 @@ init -900 python in _fom_log_screen_handler:
 
             if len(full) > trunc_len:
                 trunc = self.TRUNC_FORMAT.format(remaining=len(full) - trunc_len)
-                return full[:trunc_len] + trunc
+                return full[:trunc_len - len(trunc)] + trunc
+
             return full
 
 
