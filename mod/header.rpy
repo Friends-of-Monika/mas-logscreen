@@ -12,6 +12,6 @@ init -989 python:
         store.sup_utils.SubmodUpdater(
             submod="Log Screen",
             user_name="friends-of-monika",
-            repository_name="mas-submod-template",
+            repository_name="mas-logscreen",
             extraction_depth=2
         )
