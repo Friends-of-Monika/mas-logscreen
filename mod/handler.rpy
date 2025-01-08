@@ -63,11 +63,18 @@ init -900 python in _fom_log_screen_handler:
             full = super(TruncatingStructPrinter, self).print_record(record)
             trunc_len = self._config.font_trunclen
 
+            result_str = full
             if len(full) > trunc_len:
                 trunc = self.TRUNC_FORMAT.format(remaining=len(full) - trunc_len)
-                return full[:trunc_len - len(trunc)] + trunc
 
-            return full
+                result_str = full[:trunc_len]
+                if result_str.endswith("[") or result_str.endswith("{"):
+                    result_str = result_str[:-1] + quote(result_str[-1])
+                    result_str = result_str.ljust(trunc_len) + "{:>23}".format(trunc)
+                else:
+                    result_str = result_str.ljust(trunc_len) + "{:>24}".format(trunc)
+
+            return result_str
 
 
     class ColorStructPrinter(StructPrinter):

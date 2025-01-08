@@ -128,10 +128,10 @@ init -1000 python in _fom_log_screen_config:
 
         # Font sizes are defined here, each tuple has these four items:
         # name, {size=} parameter size, height in pixels, truncation length
-        _FONTS = {0: ("Tiny", "-4", 16, 180),
-                  1: ("Small", "-2", 18, 160),
-                  2: ("Normal", "+0", 20, 110),
-                  3: ("Big", "+2", 22, 100)}
+        _FONTS = {0: ("Tiny", "-4", 16, 154),
+                  1: ("Small", "-2", 18, 130),
+                  2: ("Normal", "+0", 20, 114),
+                  3: ("Big", "+2", 22, 102)}
 
         @property
         def font_size_names(self):
